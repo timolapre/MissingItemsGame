@@ -1,10 +1,9 @@
 <h2>Hoi {{name}}</h2>
-<form action="./api/changeAnswer" method="POST" id="changeAnswer">
+<form id="changeAnswer">
     <div class="form-group">
-        <label for="answer"><p>Vul hier je antwoorden in met een komma ertussen. (auto, pizza, huis)</p></label>
-        <input type="text" class="form-control"  placeholder="Enter answers" name="answer" id="form">
+        <label for="answer"><p>Vul hier je antwoorden in met een spatie oid ertussen (auto pizza huis)</p></label>
+        <input type="text" class="form-control"  placeholder="Enter answers" name="answer" id="form" onkeydown="updateAnswer();">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg">Update</button>
 </form>
 
 <script src="javascripts/answerCode.js"></script>

@@ -48,6 +48,7 @@ module.exports = function (db) {
 
     router.post('/changeAnswer', function (req, res) {
         var b = req.body;
+        console.log(b.answer);
         db.all("UPDATE players SET answer = '" + b.answer + "' WHERE id = '" + req.session.playerid + "'", function (err, row) {
             if (err) {
                 res.redirect(req.get('referer'));

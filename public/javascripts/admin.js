@@ -61,12 +61,11 @@ function clearPlayers() {
 }
 
 function addElements(element, array, playerid) {
-    console.log(element);
     var div = $('<div></div>');
     div.addClass("singleElement");
 
     if (playerid) {
-        div.append("<button class='floatr btn btn-primary marginl' onclick='addPoint(" + playerid + ")'><b>+</b></button> <button class='floatr btn btn-primary marginl' onclick='removePoint(" + playerid + ")'><b>-</b></button> <p class='floatr marginl' id='player" + playerid + "'>0<p>");
+        div.append("<button class='floatr btn btn-primary marginl' onclick='addPoint(" + playerid + ")'><b>+</b></button> <button class='floatr btn btn-primary marginl' onclick='removePoint(" + playerid + ")'><b>-</b></button> <p class='floatr marginl' id='player" + playerid + "'>0</p>");
     }
 
     for (var i = 0; i < array.length; i++) {

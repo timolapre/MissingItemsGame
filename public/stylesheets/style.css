@@ -18,6 +18,15 @@ p{
   padding: 10px;
 }
 
+.singleElement p{
+  padding: 20px;
+  margin: 0;
+}
+
+.singleElement button{
+  padding: 20px;
+}
+
 .clearplayers{
   float: right;
 }
@@ -63,4 +72,8 @@ p{
   display: inline;
   margin-left: 300px;
   font-size: 30px;
+}
+
+.website{
+  margin: 40px 0;;
 }
