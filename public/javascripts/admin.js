@@ -104,7 +104,7 @@ function goToPage(page, add) {
 
 function changeImage(removed) {
     var image = document.getElementById('gameimg');
-    if(getLevel() == 6){
+    if (getLevel() == 6) {
         goToPage('winners');
     }
     if (removed) {
@@ -127,10 +127,18 @@ function setTimer(timeLeft) {
 
     var timerId = setInterval(countdown, 1000);
 
+    var url = window.location.href.split('/');
+    console.log(url);
+    var url2 = url[4].split('?')[0];
+    console.log(url2);
     function countdown() {
         if (timeLeft == -1) {
             clearTimeout(timerId);
-            goToPage('answers');
+            if (url2 == 'game') {
+                goToPage('game2');
+            } else {
+                goToPage('answers');
+            }
         } else {
             elem.innerHTML = timeLeft + ' seconden';
             timeLeft--;
@@ -163,12 +171,12 @@ function addPoints() {
         };
         xhttp.open("POST", "/api/addpoints", true);
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        var id = parseInt(i)+1;
-        xhttp.send("playerid="+id+"&addpoints="+$("#player" + id).html());
+        var id = parseInt(i) + 1;
+        xhttp.send("playerid=" + id + "&addpoints=" + $("#player" + id).html());
     }
 }
 
-function getMissingCount(){
+function getMissingCount() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
