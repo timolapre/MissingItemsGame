@@ -13,6 +13,12 @@ module.exports = function (db) {
         });
     });
 
+    router.get("/winners", function (req, res) {
+        db.all("SELECT * FROM players ORDER BY points DESC", function (err, row) {
+            res.send(row);
+        });
+    });
+
     router.get("/gameinfo", function (req, res) {
         db.all("SELECT * FROM gameinfo WHERE id='" + req.query.level +"'", function (err, row) {
             res.send(row);

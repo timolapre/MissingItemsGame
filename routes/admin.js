@@ -19,4 +19,8 @@ router.get('/answers', function (req, res, next) {
     res.render('answers');
 });
 
+router.get('/winners', function (req, res, next) {
+    res.render('winners');
+});
+
 module.exports = router;

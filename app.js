@@ -37,6 +37,8 @@ db.serialize(function () {
     db.run("INSERT INTO gameinfo VALUES (1, 1, 'Schaar')");
     db.run("INSERT INTO gameinfo VALUES (2, 2, 'Kikker, Koe')");
     db.run("INSERT INTO gameinfo VALUES (3, 3, 'Kaas, Ijs, Brood')");
+    db.run("INSERT INTO gameinfo VALUES (4, 3, 'Segway, Luchtballon, Vliegtuig')");
+    db.run("INSERT INTO gameinfo VALUES (5, 4, 'Boek, Donut, Tas, Taart')");
 
 });
 

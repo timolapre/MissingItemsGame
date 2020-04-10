@@ -5,13 +5,30 @@ function getAllPlayers() {
             console.log(this.responseText);
             var response = JSON.parse(this.responseText);
             var allplayers = $("#allplayers");
-            allplayers.innerHTML = '';
+            allplayers.html('');
             for (i = 0; i < response.length; i++) {
                 addElements(allplayers, [response[i].name]);
             }
         }
     };
     xhttp.open("GET", "/api/players", true);
+    xhttp.send();
+}
+
+function getAllWinners() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            var response = JSON.parse(this.responseText);
+            var allplayers = $("#allplayers");
+            allplayers.html('');
+            for (i = 0; i < response.length; i++) {
+                addElements(allplayers, [response[i].name, response[i].points]);
+            }
+        }
+    };
+    xhttp.open("GET", "/api/winners", true);
     xhttp.send();
 }
 
@@ -22,7 +39,7 @@ function getAllAnswers() {
             console.log(this.responseText);
             var response = JSON.parse(this.responseText);
             var allplayers = $("#allanswers");
-            allplayers.innerHTML = '';
+            allplayers.html('');
             for (i = 0; i < response.length; i++) {
                 addElements(allplayers, [response[i].name, response[i].answer], response[i].id);
             }
@@ -88,6 +105,9 @@ function goToPage(page, add) {
 
 function changeImage(removed) {
     var image = document.getElementById('gameimg');
+    if(getLevel() == 6){
+        goToPage('winners');
+    }
     if (removed) {
         image.src = "../images/" + getLevel() + "r.png"
     } else {
