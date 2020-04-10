@@ -30,8 +30,6 @@ var db = new sqlite3.Database(':memory:');
 // Insert data into database
 db.serialize(function () {
     db.run("CREATE TABLE players (id integer NOT NULL PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), active VARCHAR(1) DEFAULT 1, answer VARCHAR(255), points integer DEFAULT 0)");
-    db.run("INSERT INTO players VALUES (1, 'Testings', 1, 'Een mooi antwoord', 0)");
-    db.run("INSERT INTO players VALUES (2, 'Name2', 1, 'Antwoord2, iets', 0)");
 
     db.run("CREATE TABLE gameinfo (id integer NOT NULL PRIMARY KEY AUTOINCREMENT, amount VARCHAR(255), answer VARCHAR(255))");
     db.run("INSERT INTO gameinfo VALUES (1, 1, 'Schaar')");
