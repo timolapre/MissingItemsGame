@@ -1,0 +1,66 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 30px 80px 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p{
+  font-size: 30px;
+}
+
+.singleElement{
+  border: black 1px solid;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.clearplayers{
+  float: right;
+}
+
+.gameimg{
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px;
+  height: 700px;
+}
+
+#gameimg{
+  display: block;
+  margin: auto;
+}
+
+#callbackExample{
+  float:right;
+}
+
+.floatr{
+  float: right;
+}
+
+.answerlist{
+  margin: 30px 300px;
+}
+
+.form-group{
+  margin: 50px 0;
+}
+
+.form-control{
+  height: 100px;
+  font-size: 40px;
+}
+
+.marginl{
+  margin-left: 20px;
+}
+
+#missingcount{
+  display: inline;
+  margin-left: 300px;
+  font-size: 30px;
+}
