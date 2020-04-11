@@ -12,6 +12,11 @@ p{
   font-size: 30px;
 }
 
+.toppage{
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
 .singleElement{
   border: black 1px solid;
   margin: 10px 0;
@@ -34,13 +39,17 @@ p{
 .gameimg{
   width: 100%;
   border: 1px solid black;
-  padding: 20px;
-  height: 700px;
+  padding: 10px;
+  height: 678px;
 }
 
 #gameimg{
   display: block;
   margin: auto;
+}
+
+#gameimg img{
+  margin: 0px;
 }
 
 #callbackExample{
@@ -52,7 +61,7 @@ p{
 }
 
 .answerlist{
-  margin: 30px 300px;
+  margin: 30px;
 }
 
 .form-group{
