@@ -104,7 +104,7 @@ function goToPage(page, add) {
 
 function changeImage(removed) {
     var image = document.getElementById('gameimg');
-    if (getLevel() == 6) {
+    if (getLevel() == 9) {
         goToPage('winners');
     }
     if (removed) {
